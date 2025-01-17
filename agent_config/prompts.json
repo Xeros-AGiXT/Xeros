@@ -1,0 +1,20 @@
+{
+  "code_review": {
+    "name": "Solana Smart Contract Code Review",
+    "prompt": "请分析以下Solana智能合约代码:\n- 安全性检查\n- 性能优化建议\n- 最佳实践符合度\n- 潜在问题警告\n代码: {code}",
+    "context_window": 4096,
+    "temperature": 0.7
+  },
+  "error_diagnosis": {
+    "name": "Error Analysis and Resolution",
+    "prompt": "遇到以下错误:\n{error_message}\n环境信息:\n- Solana CLI版本: {version}\n- Anchor版本: {anchor_version}\n- 网络环境: {network}\n请提供可能的原因和解决方案。",
+    "context_window": 4096,
+    "temperature": 0.7
+  },
+  "development_guidance": {
+    "name": "Development Guidance",
+    "prompt": "我想实现以下功能:\n{feature_description}\n请提供:\n1. 架构建议\n2. 代码示例\n3. 注意事项\n4. 测试建议",
+    "context_window": 4096,
+    "temperature": 0.7
+  }
+}

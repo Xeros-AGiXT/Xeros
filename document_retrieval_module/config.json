@@ -1,0 +1,38 @@
+{
+    "documentation_sources": {
+        "solana": {
+            "base_url": "https://docs.solana.com",
+            "api_endpoint": "/api/search",
+            "update_interval": 86400,
+            "categories": ["development", "architecture", "cli", "programs"]
+        },
+        "anchor": {
+            "base_url": "https://docs.rs/anchor-lang",
+            "api_endpoint": "/search",
+            "update_interval": 86400,
+            "categories": ["tutorials", "reference", "guides", "examples"]
+        },
+        "spl": {
+            "base_url": "https://spl.solana.com",
+            "api_endpoint": "/search",
+            "update_interval": 86400,
+            "categories": ["tokens", "governance", "stake-pool", "name-service"]
+        }
+    },
+    "cache_settings": {
+        "ttl_hours": 24,
+        "max_size_mb": 100,
+        "cleanup_interval": 3600
+    },
+    "search_settings": {
+        "max_results": 10,
+        "min_relevance_score": 0.5,
+        "title_weight": 0.7,
+        "content_weight": 0.3
+    },
+    "update_settings": {
+        "check_interval": 3600,
+        "retry_attempts": 3,
+        "retry_delay": 300
+    }
+}

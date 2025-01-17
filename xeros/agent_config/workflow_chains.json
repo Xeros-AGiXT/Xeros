@@ -1,0 +1,95 @@
+{
+  "project_initialization": {
+    "name": "New Project Initialization",
+    "steps": [
+      {
+        "name": "environment_check",
+        "type": "validation",
+        "required": true,
+        "description": "Validate development environment"
+      },
+      {
+        "name": "template_generation",
+        "type": "action",
+        "required": true,
+        "description": "Generate project template"
+      },
+      {
+        "name": "dependency_setup",
+        "type": "action",
+        "required": true,
+        "description": "Configure project dependencies"
+      },
+      {
+        "name": "initialization_commands",
+        "type": "action",
+        "required": true,
+        "description": "Generate initialization commands"
+      }
+    ]
+  },
+  "contract_deployment": {
+    "name": "Smart Contract Deployment",
+    "steps": [
+      {
+        "name": "code_review",
+        "type": "validation",
+        "required": true,
+        "description": "Code review"
+      },
+      {
+        "name": "test_validation",
+        "type": "validation",
+        "required": true,
+        "description": "Test validation"
+      },
+      {
+        "name": "deployment_preparation",
+        "type": "action",
+        "required": true,
+        "description": "Deployment preparation"
+      },
+      {
+        "name": "command_generation",
+        "type": "action",
+        "required": true,
+        "description": "Generate deployment commands"
+      },
+      {
+        "name": "deployment_verification",
+        "type": "validation",
+        "required": true,
+        "description": "Verify deployment results"
+      }
+    ]
+  },
+  "problem_diagnosis": {
+    "name": "Problem Diagnosis",
+    "steps": [
+      {
+        "name": "error_collection",
+        "type": "collection",
+        "required": true,
+        "description": "Collect error information"
+      },
+      {
+        "name": "environment_check",
+        "type": "validation",
+        "required": true,
+        "description": "Check environment configuration"
+      },
+      {
+        "name": "log_analysis",
+        "type": "analysis",
+        "required": true,
+        "description": "Analyze log information"
+      },
+      {
+        "name": "solution_recommendation",
+        "type": "recommendation",
+        "required": true,
+        "description": "Recommend solutions"
+      }
+    ]
+  }
+}

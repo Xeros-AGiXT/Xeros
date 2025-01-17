@@ -1,0 +1,143 @@
+{
+    "cli_settings": {
+        "default_network": "devnet",
+        "default_keypair_path": "~/.config/solana/id.json",
+        "command_timeout": 300
+    },
+    "environment": {
+        "required_components": {
+            "solana-cli": {
+                "version": "1.14.x",
+                "url": "https://docs.solana.com/cli/install-solana-cli-tools",
+                "validation_command": "solana --version"
+            },
+            "anchor": {
+                "version": "0.27.x",
+                "url": "https://www.anchor-lang.com/docs/installation",
+                "validation_command": "anchor --version"
+            },
+            "rust": {
+                "version": "1.69.x",
+                "url": "https://rustup.rs",
+                "validation_command": "rustc --version"
+            }
+        },
+        "recommended_tools": {
+            "cargo-expand": {
+                "purpose": "Macro debugging",
+                "installation": "cargo install cargo-expand"
+            },
+            "solana-test-validator": {
+                "purpose": "Local development",
+                "installation": "solana-test-validator --help"
+            }
+        }
+    },
+    "deployment": {
+        "networks": {
+            "localnet": {
+                "url": "http://127.0.0.1:8899",
+                "websocket": "ws://127.0.0.1:8900"
+            },
+            "devnet": {
+                "url": "https://api.devnet.solana.com",
+                "websocket": "wss://api.devnet.solana.com"
+            },
+            "testnet": {
+                "url": "https://api.testnet.solana.com",
+                "websocket": "wss://api.testnet.solana.com"
+            }
+        },
+        "security": {
+            "keypair_encryption": true,
+            "require_multi_sig": false,
+            "deployment_approval_required": true
+        }
+    },
+    "workflow_chains": {
+        "initialization": {
+            "steps": [
+                {
+                    "name": "environment_check",
+                    "type": "validation",
+                    "required": true
+                },
+                {
+                    "name": "template_generation",
+                    "type": "action",
+                    "required": true
+                },
+                {
+                    "name": "dependency_setup",
+                    "type": "action",
+                    "required": true
+                },
+                {
+                    "name": "initialization_commands",
+                    "type": "action",
+                    "required": true
+                }
+            ]
+        },
+        "deployment": {
+            "steps": [
+                {
+                    "name": "code_review",
+                    "type": "validation",
+                    "required": true
+                },
+                {
+                    "name": "test_validation",
+                    "type": "validation",
+                    "required": true
+                },
+                {
+                    "name": "deployment_preparation",
+                    "type": "action",
+                    "required": true
+                },
+                {
+                    "name": "command_generation",
+                    "type": "action",
+                    "required": true
+                },
+                {
+                    "name": "deployment_verification",
+                    "type": "validation",
+                    "required": true
+                }
+            ]
+        },
+        "diagnostics": {
+            "steps": [
+                {
+                    "name": "error_collection",
+                    "type": "collection",
+                    "required": true
+                },
+                {
+                    "name": "environment_check",
+                    "type": "validation",
+                    "required": true
+                },
+                {
+                    "name": "log_analysis",
+                    "type": "analysis",
+                    "required": true
+                },
+                {
+                    "name": "solution_recommendation",
+                    "type": "recommendation",
+                    "required": true
+                }
+            ]
+        }
+    },
+    "performance": {
+        "command_cache_ttl": 3600,
+        "max_concurrent_operations": 5,
+        "operation_timeout": 300,
+        "retry_attempts": 3,
+        "retry_delay": 5
+    }
+}

@@ -1,0 +1,27 @@
+{
+  "code_review": {
+    "name": "Solana Smart Contract Code Review",
+    "prompt": "Please analyze the following Solana smart contract code:\n- Security checks\n- Performance optimization suggestions\n- Best practices compliance\n- Potential issue warnings\nCode: {code}",
+    "context_window": 4096
+  },
+  "code_generation": {
+    "name": "Solana Smart Contract Generation",
+    "prompt": "Generate Solana smart contract code based on the following requirements:\nRequirements: {requirements}\n\nPlease provide:\n1. Complete contract code\n2. Key section explanations\n3. Security considerations\n4. Testing suggestions",
+    "context_window": 4096
+  },
+  "test_generation": {
+    "name": "Test Case Generation",
+    "prompt": "Generate test cases for the following Solana smart contract:\nContract code: {contract_code}\n\nPlease generate:\n1. Unit tests\n2. Integration tests\n3. Edge case tests\n4. Security tests",
+    "context_window": 4096
+  },
+  "optimization_suggestions": {
+    "name": "Code Optimization Suggestions",
+    "prompt": "Analyze performance optimization opportunities for the following Solana smart contract:\nContract code: {contract_code}\n\nPlease provide:\n1. Performance bottleneck analysis\n2. Optimization suggestions\n3. Resource usage improvements\n4. Best practices comparison",
+    "context_window": 4096
+  },
+  "template_recommendation": {
+    "name": "Smart Contract Template Recommendation",
+    "prompt": "Recommend smart contract templates based on the following requirements:\nRequirements: {requirements}\n\nPlease provide:\n1. Recommended template\n2. Selection rationale\n3. Usage suggestions\n4. Important considerations",
+    "context_window": 4096
+  }
+}
