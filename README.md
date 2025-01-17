@@ -1,4 +1,5 @@
 # Xeros - A Solana Development Assistant
+![image](https://github.com/user-attachments/assets/bb770095-1f30-46e1-9961-49bc14cc37c3)
 
 Xeros is a comprehensive development assistant for Solana blockchain development, built as a standalone implementation inspired by the [AGiXT](https://josh-xt.github.io/AGiXT/) framework. It combines powerful AI capabilities with specialized blockchain development tools to streamline the Solana development process.
 
